@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,900;1,400&display=swap" 
+       rel="stylesheet"
+    />
+    <title>Formulário (Em progresso)</title>
+</head>
+<body>
+    <div class="container">
+
+         <div class="header">
+            <h2>Crie seu cadastro</h2>
+         </div>
+         <div class="progress-bar">
+            <div id="progress"></div>
+         </div>
+         
+         <dvi class="step-row">
+            <div class="step-col"><small>Seus Dados</small></div>
+            <div class="step-col"><small>Perguntas</small></div>
+            <div class="step-col"><small>Enviar</small></div>
+         </dvi>
+         
+         
+         <form id="form1" class="form">
+            <div class="form-control" >
+                <label for="username">Seu Nome </label>
+                <input type="text" id="username" placeholder="Digite o seu nome...">
+                
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Seu Email</label>
+                <input type="text" id="email" placeholder="Digite o seu email...">
+                
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite a sua senha...">
+                
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password-confirmation">Confirmação de Senha</label>
+                <input type="password" id="password-confirmation" placeholder="Digite a sua senha novamente...">
+                
+                <small>Mensagem de erro</small>
+            </div>
+            
+            <div class = "btn-box">
+                <button type="button" onclick="navigateForms('form1', 'form2')">Próximo</button>
+
+            </div>
+            
+         </form>
+
+
+         <form id="form2" class="form" style="display: none;">
+            <div class="form-control" >
+                <h3>Responda algumas perguntas para ganhar seu Chopp!</h3>
+                <label for="perguntaidade"> Sua Idade </label>
+                <input type="text" id="perguntaidade" placeholder="Digite a sua idade...">
+               
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="perguntavezesacaldas">Quantidade de vezes que vem para Caldas Novas no ano</label>
+                <select name="options" id="perguntavezesacaldas">
+                    <option value="1-5">1-5 Vezes em Caldas</option>
+                    <option value="5-10">5-10 vezes em Caldas</option>
+                    <option value="acima-de-10">Acima de 10 vezes em Caldas</option>
+                    <option value="Sou morador">Sou morador</option>
+                </select>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="perguntapoderdecompra">Você é o principal responsavél pelas compras feitas em Caldas ?</label>
+                <select name="options" id="perguntapoderdecompra">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="perguntaquemveio">Com quem você veio nessa viagem para Caldas Novas ?</label>
+                <select name="options" id="perguntaquemveio">
+                    <option value="Minha família">Minha família</option>
+                    <option value="Meu amigos">Meus amigos</option>
+                    <option value="Sozinho">Sozinho</option>
+                    <option value="Não esto viajando">Não estou viajando</option>
+                </select>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class = "btn-box">
+               <button type="button" onclick="navigateForms('form2', 'form3')">Próximo</button>
+               <button type="button" onclick="navigateForms('form2', 'form1')">Voltar</button>
+            </div>
+            
+         </form>
+
+
+
+         <form id="form3" class="form"  style="display: none;">
+            <div class="form-control" >
+                <h3>Obrigado pelas respostas, cadastre-se e pegue seu Chopp Gratuito com o atendente.</h3>
+               
+                
+            </div>
+            
+            <div class = "btn-box">
+                <button type="button" onclick="submitForm(true)">Enviar</button>
+                <button type="button" onclick="navigateForms('form3', 'form2')">Voltar</button>
+
+            </div>
+            
+         </form>
+        
+    
+        
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

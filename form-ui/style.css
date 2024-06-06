@@ -1,0 +1,149 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+ }
+
+ body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #00dbde 0%, #fc00fc 100%);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    width: 500px;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.progress-bar {
+    width: 500px;
+    height: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.step-row{
+    width: 500px;
+    height: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+   
+}
+
+
+.step-col{
+    width: 600px;
+    height: 60px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+
+.header{
+    height: 100px;
+    background-color: #eee;
+    padding: 20px;
+    align-items: center;
+}
+
+.form{
+    padding: 20px;
+    
+}
+
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+
+}
+
+.form-control input{
+    border : 2px solid #f0f0f0;
+    display: block;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control i{
+    position: absolute;
+    top: 45px ;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control select {
+    border: 2px solid #f0f0f0;
+    border-radius: 10px; 
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px; 
+}
+
+
+.form button{
+    background-color: #fc00ff;
+    border: 2px solid #fc00ff;
+    color: #fff;
+    font-size: 14px;    
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#progress {
+    height: 100%;
+    width: 125px; 
+    background: linear-gradient(to right, #fc00ff, #00dbde);
+    transition: width 0.3s ease; 
+}
+
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+
+.form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+
+
+
